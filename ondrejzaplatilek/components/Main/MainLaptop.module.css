@@ -1,0 +1,19 @@
+.main{
+   
+}
+.video{
+    object-fit: cover;   
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1; 
+    display: block;
+}
+.invert{
+    filter: invert(100%) saturate(3) grayscale(1) opacity(8);
+}
+.arrow:hover{
+
+    font-size: 3.5rem;
+    transition: all 0.5s;
+}
