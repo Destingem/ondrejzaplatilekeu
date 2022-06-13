@@ -1,14 +1,16 @@
 import {
   ActionIcon,
   Button,
+  Card,
   Grid,
   Input,
+  Paper,
   Progress,
   Text,
   TextInput,
   useMantineColorScheme,
 } from "@mantine/core";
-import Image from "next/image"
+import Image from "next/image";
 import { useWindowScroll } from "@mantine/hooks";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -69,17 +71,20 @@ export default function MainLaptop() {
         loop
         muted
         height="100px"
+        style={{
+          height: "100vh"
+        }}
         className={
           colorScheme === "dark"
             ? styles.video
             : styles.video + " " + styles.invert
         }
       >
-        <source src="background.mp4" />
+        <source src="background-min.webm" />
       </video>
       <div style={{ display: "flex", flexDirection: "column", margin: 0 }}>
         <div style={{ height: "100vh" }} className={styles.main}>
-      <Navbar />
+          <Navbar />
           <div style={{ textAlign: "center", margin: "30vh 0 0 0" }}>
             <Text size="xl" sx={{ fontWeight: 600, fontSize: "6rem" }}>
               Ondřej Zaplatílek
@@ -97,7 +102,10 @@ export default function MainLaptop() {
               }}
             >
               <div style={{ transform: "rotate(270deg)", zIndex: "-1" }}>
-                <MdOutlineArrowBackIosNew fontSize="4rem" className={styles.arrow}/>
+                <MdOutlineArrowBackIosNew
+                  fontSize="4rem"
+                  className={styles.arrow}
+                />
               </div>
             </div>
           </div>
@@ -115,11 +123,40 @@ export default function MainLaptop() {
             <Text size="xl" sx={{ fontSize: "4rem" }}>
               O mně
             </Text>
-            <Text size="xl" mt="5vh">
-              Jmenuji se Ondřej a baví mě web development. Studuji na SŠIPF Brno
-              obor Informační technologie se zaměřením na kybernetickou
-              bezpečnost.
-            </Text>
+            <div style={{ display: "flex" }}>
+              <div>
+                <Text size="xl" mt="5vh">
+                  Jmenuji se Ondřej a baví mě web development. Studuji na SŠIPF
+                  Brno obor Informační technologie se zaměřením na kybernetickou
+                  bezpečnost. Tvořím především v Webové aplikace postavené na
+                  React.js ve frameworku Next.js.
+                </Text>
+                <Grid sx={{ margin: "5vh 0 0 0" }}>
+                  <Paper shadow="xl" sx={{alignItems: "center", justifyContent: "center", display: "flex", flexDirection: "column" }}>
+                    <Image src="/next.png" width={100} height={100}></Image>
+                    <Text size="xl">Next.js</Text>
+                  </Paper>
+                </Grid>
+                <Button
+                  sx={{ margin: "2vh 0 0 0" }}
+                  type="submit"
+                  variant="gradient"
+                  gradient={{ from: "indigo", to: "green" }}
+                >
+                  Více o mě
+                </Button>
+                
+              </div>
+              <div>
+                <Image
+                  src="/me.png"
+                  alt="Profilová fotka Ondřej Zaplatílek"
+                  width={600}
+                  height={600}
+                  style={{ borderRadius: "3px" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -147,13 +184,13 @@ export default function MainLaptop() {
                   backgroundColor: "#272829",
                   height: "fit-content",
                   display: "flex",
-                  minHeight: "50vh"
+                  minHeight: "50vh",
                 }
               : {
                   backgroundColor: " #cccccc",
                   height: "fit-content",
                   display: "flex",
-                  minHeight: "50vh"
+                  minHeight: "50vh",
                 }
           }
         >
@@ -188,7 +225,7 @@ export default function MainLaptop() {
                 <stop stopColor="#1f5594" offset="100%" />
               </linearGradient>
             </svg>
-            
+
             <div
               style={{
                 display: "flex",
@@ -197,28 +234,28 @@ export default function MainLaptop() {
                 margin: "2vh 0 0 0 ",
               }}
             >
-             <div style={{display: "flex", gap: "1%"}}>
-            <HiOutlineMail
+              <div style={{ display: "flex", gap: "1%" }}>
+                <HiOutlineMail
                   fontSize="1.5rem"
-                  style={{ stroke: "url(#blue-gradient)", position: "relative", top: "0.4vh" }}
+                  style={{
+                    stroke: "url(#blue-gradient)",
+                    position: "relative",
+                    top: "0.4vh",
+                  }}
                 />
-              <Text>
-                
-                ondrej@ondrejzaplatilek.eu
-              </Text>
+                <Text>ondrej@ondrejzaplatilek.eu</Text>
               </div>
-              <div style={{display: "flex", gap: "1%"}}>
-              <BsTelephone
+              <div style={{ display: "flex", gap: "1%" }}>
+                <BsTelephone
                   fontSize="1.5rem"
-                  style={{ fill: "url(#blue-gradient)", position: "relative", top: "0.4vh" }}
-                  
+                  style={{
+                    fill: "url(#blue-gradient)",
+                    position: "relative",
+                    top: "0.4vh",
+                  }}
                 />
-              <Text>
-                
-                +420 608 270 754
-              </Text>
+                <Text>+420 608 270 754</Text>
               </div>
-              
             </div>
 
             <div
@@ -241,9 +278,13 @@ export default function MainLaptop() {
               <a
                 target="_blank"
                 href="https://www.instagram.com/ondrejzaplatilek/"
-                
               >
-                <img src="/Instagram-Logo.svg" layout="responsive" height={60} width={60}/>
+                <img
+                  src="/Instagram-Logo.svg"
+                  layout="responsive"
+                  height={60}
+                  width={60}
+                />
               </a>
             </div>
           </div>
