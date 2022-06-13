@@ -26,7 +26,6 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { ImLinkedin2 } from "react-icons/im";
 import { FiInstagram } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
-import { classicNameResolver, transform } from "typescript";
 import { useForm } from "@mantine/form";
 import Navbar from "../UI/Navbar";
 export default function MainLaptop() {
