@@ -267,7 +267,7 @@ export default function MainLaptop() {
               }}
             >
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://www.linkedin.com/in/ond%C5%99ej-zaplat%C3%ADlek-7aa2b31bb/"
               >
                 <ImLinkedin2
@@ -276,7 +276,7 @@ export default function MainLaptop() {
                 />
               </a>
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://www.instagram.com/ondrejzaplatilek/"
               >
                 <img
