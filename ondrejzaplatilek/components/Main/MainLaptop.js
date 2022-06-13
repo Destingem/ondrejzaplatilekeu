@@ -20,7 +20,7 @@ import {
   BsTelephone,
   BsInstagram,
 } from "react-icons/bs";
-import useDeviceSize from "../myHooks/deviceSIze";
+import useDeviceSize from "../myHooks/deviceSize";
 import styles from "./MainLaptop.module.css";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { ImLinkedin2 } from "react-icons/im";
